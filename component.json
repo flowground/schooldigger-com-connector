@@ -1,0 +1,134 @@
+{
+    "title": "SchoolDigger API V1",
+    "description": "Get detailed data on over 120,000 schools and 18,500 districts in the U.S.",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/schooldigger.com/v1/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://api.schooldigger.com/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "Districts_GetAllDistricts": {
+            "main": "./lib/actions/Districts_GetAllDistricts.js",
+            "title": "Returns a list of districts",
+            "description": "Search the SchoolDigger database for districts. You may use any combination of criteria as query parameters.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Districts_GetAllDistricts.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Districts_GetDistrict": {
+            "main": "./lib/actions/Districts_GetDistrict.js",
+            "title": "Returns a detailed record for one district",
+            "description": "Retrieve a single district record from the SchoolDigger database",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Districts_GetDistrict.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v1_rankings_districts__st_": {
+            "main": "./lib/actions/get_v1_rankings_districts__st_.js",
+            "title": "Returns a SchoolDigger district ranking list",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v1_rankings_districts__st_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_v1_rankings_schools__st_": {
+            "main": "./lib/actions/get_v1_rankings_schools__st_.js",
+            "title": "Returns a SchoolDigger school ranking list",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_v1_rankings_schools__st_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Schools_GetAllSchools": {
+            "main": "./lib/actions/Schools_GetAllSchools.js",
+            "title": "Returns a list of schools",
+            "description": "Search the SchoolDigger database for schools. You may use any combination of criteria as query parameters.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Schools_GetAllSchools.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "Schools_GetSchool": {
+            "main": "./lib/actions/Schools_GetSchool.js",
+            "title": "Returns a detailed record for one school",
+            "description": "Retrieve a school record from the SchoolDigger database",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/Schools_GetSchool.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

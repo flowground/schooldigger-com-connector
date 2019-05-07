@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string"
+        },
+        "appID": {
+            "required": true,
+            "type": "string"
+        },
+        "appKey": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

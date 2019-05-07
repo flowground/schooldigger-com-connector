@@ -1,0 +1,32 @@
+{
+    "type": "object",
+    "properties": {
+        "st": {
+            "required": true,
+            "type": "string"
+        },
+        "year": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "perPage": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "appID": {
+            "required": true,
+            "type": "string"
+        },
+        "appKey": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

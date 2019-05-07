@@ -1,0 +1,86 @@
+{
+    "type": "object",
+    "properties": {
+        "st": {
+            "required": true,
+            "type": "string"
+        },
+        "q": {
+            "required": false,
+            "type": "string"
+        },
+        "city": {
+            "required": false,
+            "type": "string"
+        },
+        "zip": {
+            "required": false,
+            "type": "string"
+        },
+        "nearLatitude": {
+            "required": false,
+            "type": "number",
+            "format": "double"
+        },
+        "nearLongitude": {
+            "required": false,
+            "type": "number",
+            "format": "double"
+        },
+        "boundaryAddress": {
+            "required": false,
+            "type": "string"
+        },
+        "distanceMiles": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "isInBoundaryOnly": {
+            "required": false,
+            "type": "boolean"
+        },
+        "boxLatitudeNW": {
+            "required": false,
+            "type": "number",
+            "format": "double"
+        },
+        "boxLongitudeNW": {
+            "required": false,
+            "type": "number",
+            "format": "double"
+        },
+        "boxLatitudeSE": {
+            "required": false,
+            "type": "number",
+            "format": "double"
+        },
+        "boxLongitudeSE": {
+            "required": false,
+            "type": "number",
+            "format": "double"
+        },
+        "page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "perPage": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "sortBy": {
+            "required": false,
+            "type": "string"
+        },
+        "appID": {
+            "required": true,
+            "type": "string"
+        },
+        "appKey": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}
